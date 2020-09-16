@@ -1,13 +1,24 @@
 package com.student.rest.studentrestexample;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "students")
 public class Student {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
+  
   private String name;
   private String content;
 
   public Student() {  }
 
-  public Student(int id, String name, String content) {
+  public Student(String name, String content) {
       this.setId(id);
       this.setName(name);
       this.setContent(content);
@@ -41,7 +52,7 @@ public class Student {
   public String toString() {
       return "Student{" +
               "id=" + id +
-              ", title='" + name + '\'' +
+              ", name='" + name + '\'' +
               ", content='" + content + '\'' +
               '}';
   }

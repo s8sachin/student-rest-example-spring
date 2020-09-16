@@ -18,11 +18,11 @@ public class StudentMockedData {
 
   public StudentMockedData() {
     students = new ArrayList<Student>();
-    students.add(new Student(1, "A", "one"));
-    students.add(new Student(2, "B", "two"));
-    students.add(new Student(3, "C", "three"));
-    students.add(new Student(4, "D", "four"));
-    students.add(new Student(5, "E", "five"));
+    // students.add(new Student(1, "A", "one"));
+    // students.add(new Student(2, "B", "two"));
+    // students.add(new Student(3, "C", "three"));
+    // students.add(new Student(4, "D", "four"));
+    // students.add(new Student(5, "E", "five"));
     
   }
 
@@ -55,18 +55,18 @@ public class StudentMockedData {
   }
 
   // create blog
-  public Student createStudent(int id, String title, String content) {
-    Student newStudent = new Student(id, title, content);
-    students.add(newStudent);
-    return newStudent;
-  }
+  // public Student createStudent(int id, String name, String content) {
+  //   Student newStudent = new Student(name, content);
+  //   students.add(newStudent);
+  //   return newStudent;
+  // }
 
   // update blog
-  public Student updateStudent(int id, String title, String content) {
+  public Student updateStudent(int id, String name, String content) {
     for (Student b : students) {
       if (b.getId() == id) {
         int blogIndex = students.indexOf(b);
-        b.setName(title);
+        b.setName(name);
         b.setContent(content);
         students.set(blogIndex, b);
         return b;
