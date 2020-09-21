@@ -1,5 +1,6 @@
 package com.student.rest.studentrestexample;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,13 @@ public class Student {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
   
+  @Column(name = "name")
   private String name;
+
+  @Column(name = "score")
+  private String score;
+
+  @Column(name = "content")
   private String content;
 
   public Student() {  }
