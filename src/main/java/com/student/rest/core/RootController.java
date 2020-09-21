@@ -1,4 +1,4 @@
-package com.student.rest.studentrestexample;
+package com.student.rest.core;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
