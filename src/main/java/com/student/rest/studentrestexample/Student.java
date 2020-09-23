@@ -22,6 +22,9 @@ public class Student {
 
   @Column(name = "content")
   private String content;
+  
+  @Column(name = "aaaaa")
+  private String asdf;
 
   public Student() {  }
 

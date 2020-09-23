@@ -22,7 +22,7 @@ public class StudentController {
   StudentRepository studentRespository;
 
   @GetMapping("/students")
-  public ResponseEntity<List<Student>> index(){
+  public ResponseEntity<?> index(){
     List<Student> students = studentRespository.findAll();
     return ResponseEntity.status(HttpStatus.OK).body(students);
   }
